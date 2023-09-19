@@ -2,12 +2,14 @@
 class Player
   #Will keep all information regarding player includeing lives, and user input
   #State --> Lives
+  attr_accessor :name
+
   @@players= []
 
   def initialize(name)
     @name = name
     @lives = 3
-    @@players.push(@name)
+    @@players.push(self)
   end
   #Methods --> subtract-lives
   def subtract_lives 
@@ -26,18 +28,7 @@ class Player
   end
 
   def player_score
-    puts @lives
-  end
-
-  def players
-    @@players
+    @lives
   end
 
 end
-
-player1 = Player.new("Player1")
-player2 = Player.new("Player2")
-
-# puts Player.all_players
-# player1.win_or_lose(true)
-
