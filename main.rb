@@ -5,6 +5,3 @@ require './Classes/Game'
 require './Classes/Player'
 require './Classes/Question'
 
-## Your test code can go here
-
-# pp @candidates

@@ -1,10 +1,13 @@
+
+
 class Question 
   #Will create the logic around questions and subtract lives from each playerse lives
   #State --> 
   #Methods --> ask_question, check_answer, random_number_gen
   #Data -->
-  
+
   @random_numbers = []
+  @answer
 
   def self.random_number_gen 
     #Needs 2 random numbers returned
@@ -17,10 +20,11 @@ class Question
   end
 
   def self.check_answer(random_numbers)
-    answer = random_numbers[0] + random_numbers[1]
+    @answer = random_numbers[0] + random_numbers[1]
   end
-
 end
 
-Question.ask_question(Question.random_number_gen)
-puts Question.check_answer(Question.random_number_gen)
+#This will ask the question
+# Question.ask_question(Question.random_number_gen)
+#This gives the answer as a returned value
+# puts Question.check_answer(Question.random_number_gen)

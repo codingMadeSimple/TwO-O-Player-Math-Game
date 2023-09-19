@@ -1,5 +1,4 @@
 
-
 class Player
   #Will keep all information regarding player includeing lives, and user input
   #State --> Lives
@@ -21,9 +20,16 @@ class Player
     end
     puts "#{@name} has #{@lives}/3 lives"
   end
-  #Data --> Needs name, lives to initialize
 
   def self.all_players
+    @@players
+  end
+
+  def player_score
+    puts @lives
+  end
+
+  def players
     @@players
   end
 
@@ -34,3 +40,4 @@ player2 = Player.new("Player2")
 
 # puts Player.all_players
 # player1.win_or_lose(true)
+
